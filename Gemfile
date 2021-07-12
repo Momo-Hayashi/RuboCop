@@ -1,6 +1,7 @@
+# frozen_string_literal: true
+
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
-
 
 ruby '2.6.5'
 
@@ -44,8 +45,8 @@ group :development, :test do
   gem 'pry-rails'
   gem 'rspec-rails'
   gem 'rubocop', require: false
-  gem 'rubocop-rails'
-  gem 'rubocop-checkstyle_formatter'
+  gem 'rubocop-checkstyle_formatter', require: false
+  gem 'rubocop-rails', require: false
   gem 'shoulda-matchers'
   gem 'spring'
   gem 'spring-commands-rspec'
@@ -67,11 +68,11 @@ end
 
 group :test do
   gem 'capybara'
-  gem 'webdrivers'
   gem 'rails-controller-testing'
   gem 'rspec-parameterized'
   gem 'rspec-retry'
   gem 'timecop'
+  gem 'webdrivers'
 end
 
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]

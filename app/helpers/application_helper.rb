@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module ApplicationHelper
   def markdown(text)
     html_render = MarkdownParser.new(filter_html: true, hard_wrap: true)

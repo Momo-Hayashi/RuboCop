@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 Rails.application.routes.draw do
   root 'statics#top'
   get :dashboard, to: 'teams#dashboard'
@@ -10,7 +12,7 @@ Rails.application.routes.draw do
   resource :user
 
   resources :teams do
-    resources :assigns, only: %w(create destroy)
+    resources :assigns, only: %w[create destroy]
     resources :agendas, shallow: true do
       resources :articles do
         resources :comments
@@ -21,6 +23,5 @@ Rails.application.routes.draw do
     end
   end
 
-  mount LetterOpenerWeb::Engine, at: "/letter_opener" if Rails.env.development?
-  
+  mount LetterOpenerWeb::Engine, at: '/letter_opener' if Rails.env.development?
 end

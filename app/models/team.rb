@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Team < ApplicationRecord
   include FriendlyId
   friendly_id :name

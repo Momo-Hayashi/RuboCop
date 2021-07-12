@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class AgendasController < ApplicationController
   before_action :set_agenda, only: %i[show edit update destroy]
 
