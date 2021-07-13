@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class AssignMailer < ApplicationMailer
   default from: 'from@example.com'
 

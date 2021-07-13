@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module SignInSpecHelper
   include Warden::Test::Helpers
 

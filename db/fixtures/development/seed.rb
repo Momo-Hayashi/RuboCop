@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 User.seed(
   :id,
   { id: 1,  email: Faker::Internet.email, password: 'password' },
